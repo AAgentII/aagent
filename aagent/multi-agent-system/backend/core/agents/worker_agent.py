@@ -1,7 +1,13 @@
+import sys
+import os
+
+# 添加backend目录到Python路径
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+
 from typing import Dict, Any, List
 import json
 from datetime import datetime
-from .base_agent import BaseAgent, AgentConfig, AgentOutput
+from core.base_agent import BaseAgent, AgentConfig, AgentOutput
 
 
 class WorkerAgent(BaseAgent):

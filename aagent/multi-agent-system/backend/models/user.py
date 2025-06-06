@@ -1,6 +1,12 @@
+import sys
+import os
+
+# 添加backend目录到Python路径
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from sqlalchemy import Column, String, Boolean
 from sqlalchemy.orm import relationship
-from .base import BaseModel
+from core.base import BaseModel
 
 
 class User(BaseModel):

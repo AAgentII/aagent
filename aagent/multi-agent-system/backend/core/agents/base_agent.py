@@ -6,8 +6,14 @@ import asyncio
 import json
 import uuid
 from anthropic import AsyncAnthropic
-from config.settings import settings
 import structlog
+import sys
+import os
+
+# 添加backend目录到Python路径
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+
+from config.settings import settings
 
 logger = structlog.get_logger()
 

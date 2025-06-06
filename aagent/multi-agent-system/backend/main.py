@@ -1,3 +1,9 @@
+import sys
+import os
+
+# 添加backend目录到Python路径
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager

@@ -1,7 +1,13 @@
+import sys
+import os
+
+# 添加backend目录到Python路径
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from sqlalchemy import Column, String, Float, Integer, ForeignKey, DateTime
 from sqlalchemy.orm import relationship
 from sqlalchemy.dialects.postgresql import UUID
-from .base import BaseModel
+from core.base import BaseModel
 
 
 class AgentMetric(BaseModel):
